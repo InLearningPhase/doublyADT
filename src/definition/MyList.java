@@ -4,8 +4,8 @@ import adt.doublyADT;
 
 public class MyList<E> implements doublyADT<E> {
 
-    private Node<E> front = null;
-    private Node<E> rear = null;
+    private Node<E> head = null;
+    private Node<E> tail = null;
     private int size = 0;
 
     @Override
@@ -31,7 +31,7 @@ public class MyList<E> implements doublyADT<E> {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("[");
-        Node<E> temp = front;
+        Node<E> temp = head;
         for (int i = 0; i < size && temp != null; i++) {
             E data = temp.getData();
             sb.append(data);
